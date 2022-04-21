@@ -51,7 +51,7 @@ class DynamoCheckpoints:
             return False
 
     def create_table(self):
-        logger.info(f"Creating dynamo table")
+        logger.info("Creating dynamo table")
         if not self.model.exists():
             self.model.create_table(billing_mode="PAY_PER_REQUEST", wait=True)
 
